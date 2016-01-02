@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Alex\\AndroidstudioProjects\\3.1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\full_image.xml",
+        "source": "C:\\Users\\Alex\\AndroidstudioProjects\\3.1\\app\\src\\main\\res\\layout\\full_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex\\AndroidstudioProjects\\3.1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_camera.xml",
+        "source": "C:\\Users\\Alex\\AndroidstudioProjects\\3.1\\app\\src\\main\\res\\layout\\fragment_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex\\AndroidstudioProjects\\3.1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_gallery.xml",
+        "source": "C:\\Users\\Alex\\AndroidstudioProjects\\3.1\\app\\src\\main\\res\\layout\\fragment_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex\\AndroidstudioProjects\\3.1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Alex\\AndroidstudioProjects\\3.1\\app\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]
