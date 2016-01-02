@@ -40,6 +40,8 @@ public class CameraLiveView extends SurfaceView implements Callback {
             // camera.startPreview();
         } catch (IOException e) {
             Log.d(TAG, "Error setting camera preview: " + e.getMessage());
+        } catch (Exception e) {
+            Log.d(TAG, "Unexpected exception: " + e.getMessage());
         }
 
     }
