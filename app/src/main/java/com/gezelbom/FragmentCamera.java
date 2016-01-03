@@ -108,7 +108,7 @@ public class FragmentCamera extends Fragment {
             }
 
             // Create a media file name
-            String timeStamp = new SimpleDateFormat("yyyyMMdd-HH:mm:ss",
+            String timeStamp = new SimpleDateFormat("yyyyMMdd-HHmmss",
                     Locale.getDefault()).format(new Date());
             File mediaFile;
             mediaFile = new File(picturesDir.getPath() + File.separator

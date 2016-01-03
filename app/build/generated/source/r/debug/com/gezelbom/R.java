@@ -13,6 +13,13 @@ public final class R {
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
+        public static final int horizontal_page_margin=0x7f050002;
+        public static final int margin_huge=0x7f050003;
+        public static final int margin_large=0x7f050004;
+        public static final int margin_medium=0x7f050005;
+        public static final int margin_small=0x7f050006;
+        public static final int margin_tiny=0x7f050007;
+        public static final int vertical_page_margin=0x7f050008;
     }
     public static final class drawable {
         public static final int ic_action_video=0x7f020000;
@@ -20,12 +27,14 @@ public final class R {
     }
     public static final class id {
         public static final int button_capture=0x7f080004;
+        public static final int content_frame=0x7f080005;
         public static final int frameLayout=0x7f080002;
-        public static final int full_image_view=0x7f080006;
-        public static final int gridView1=0x7f080005;
+        public static final int full_image_view=0x7f080008;
+        public static final int gridView1=0x7f080007;
         public static final int pager=0x7f080000;
         public static final int pager_header=0x7f080001;
         public static final int surface=0x7f080003;
+        public static final int swipe_container=0x7f080006;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
