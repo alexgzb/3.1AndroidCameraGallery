@@ -1,2 +1,0 @@
-C:\Users\Alex\AndroidstudioProjects\3.1\app\build\intermediates\classes\debug
-C:\Users\Alex\AndroidstudioProjects\3.1\app\build\intermediates\pre-dexed\debug\android-support-v13-092a744ce5e8541d560a908f7ab9566798e49dd5.jar
