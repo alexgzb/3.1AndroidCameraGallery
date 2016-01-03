@@ -13,16 +13,21 @@ import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.provider.MediaStore;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.CursorAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 /**
  * Fragment to display a gallery of the images in the path
@@ -38,6 +43,7 @@ public class FragmentGallery extends Fragment {
     private int thumbColumnIndex;
     private int idColumnIndex;
     private int thumb[];
+    private GridView grid;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,8 +52,19 @@ public class FragmentGallery extends Fragment {
         Log.d(TAG, "OnCreateView Launched");
         View v = inflater.inflate(R.layout.fragment_gallery, container, false);
         loadGallery();
-        GridView grid = (GridView) v.findViewById(R.id.gridView1);
+        final SwipeRefreshLayout swipeLayout = (SwipeRefreshLayout) v.findViewById(R.id.swipe_container);
+        grid = (GridView) v.findViewById(R.id.gridView1);
+
         grid.setAdapter(new ImageAdapter(getActivity()));
+
+        swipeLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                loadGallery();
+                grid.setAdapter(new ImageAdapter(getActivity()));
+                swipeLayout.setRefreshing(false);
+            }
+        });
 
         // Set up a anonymous inner- click listener
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -70,6 +87,14 @@ public class FragmentGallery extends Fragment {
 
         return v;
 
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser) {
+            Toast.makeText(getActivity(), " Pull to refresh gallery ", Toast.LENGTH_SHORT).show();
+        }
     }
 
     /**
